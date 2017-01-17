@@ -47,18 +47,17 @@
 function insertionSort(array) {
 	if (!array || array.length <= 1) {return array;}
 	
-	// go through the possibly unsorted portion
-	for (var i = 1; i < array.length; i++) {
-		// go through the sorted portion
-		for (var j = 0; j < i; j++) {
-			if (array[i] < array[j]) {
+	for (var ii = 1; ii < array.length; ii++) {
+		for (var jj = ii; jj > 0; jj--) {
+			if (array[jj] < array[jj - 1]) {
 				// swap
-				var temp = array[j];
-				array[j] = array[i];
-				array[i] = temp;
+				var temp = array[jj];
+				array[jj] = array[jj - 1];
+				array[jj - 1] = temp;
 			}
-			// can't short-circuit on array[i] >= array[j] here
-			// if the array supports duplicates
+			else {
+				break;
+			}
 		}
 	}
 	
