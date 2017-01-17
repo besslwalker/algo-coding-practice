@@ -62,5 +62,6 @@ function insertionSort(array) {
 		}
 	}
 	
+	// allow chaining
 	return array;
 };
