@@ -8,7 +8,58 @@
 // You can assume that the array has less than 100,000 elements.
 // For the purposes of this Kata, time and memory performance are
 // not issues (assuming the chop terminates before you get bored 
-// and kill it, and that you have enough RAM to run it.	
+// and kill it, and that you have enough RAM to run it.)
+
+(function test(){
+	var target = 0;
+	var index = -1;
+	
+	var permut_0 = undefined;
+	
+	console.log(permut_0);
+	index = chop(target, permut_0);
+	console.log(index);
+	
+	console.log();
+	
+	var permut_1 = [];
+	
+	console.log(permut_1);
+	index = chop(target, permut_1);
+	console.log(index);
+	
+	console.log();
+	
+	var permut_2 = [1, 2, 3, 4, 5, 6];
+	
+	console.log(permut_2);
+	index = chop(target, permut_2);
+	console.log(index);
+	
+	console.log();
+	
+	var permut_3 = [0, 1, 2, 3, 4, 5];
+	
+	console.log(permut_3);
+	index = chop(target, permut_3);
+	console.log(index);
+	
+	console.log();
+	
+	var permut_4 = [-1, 0, 0, 2, 3, 4];
+	
+	console.log(permut_4);
+	index = chop(target, permut_4);
+	console.log(index);
+	
+	console.log();
+	
+	var permut_5 = [-5, -4, -3, -2, -1, 0];
+	
+	console.log(permut_5);
+	index = chop(target, permut_5);
+	console.log(index);
+})();	
 
 function chop(target, array) {
 	if (!array) {return -1;}
