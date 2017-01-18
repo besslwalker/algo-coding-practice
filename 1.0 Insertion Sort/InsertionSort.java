@@ -1,4 +1,4 @@
-inininiinnxsdf/* Insertion Sort (Integers)
+/* Insertion Sort (Integers)
  * Bess L. Walker
  * 11-14-11
  * Java stuff!
