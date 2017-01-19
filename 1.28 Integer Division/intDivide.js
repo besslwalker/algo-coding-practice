@@ -31,6 +31,7 @@ function intDivideRS(dividend, divisor) {
 // Without the recursion, and assuming a populated store, this is O(lg n) where n = dividend
 // With the recursion on the remainderSum (still assuming a populated store),
 // it's something like this:
+//   - the remainderSum will be < 1/2 of the original dividend (NO, WRONG, 15 => 10, ARGUMENT NEEDS REWORK)
 //   - so we're looking at something like O(1/2(lg(n)) + 1/4(lg(n)) + ...)
 //   - so in total that approaches O(2*lg(n)), which is simply lg(n) again
 // The worst case for store population is O(n), since that is essentially
