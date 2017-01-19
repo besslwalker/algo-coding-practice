@@ -31,7 +31,6 @@ function intDivideRS(dividend, divisor) {
 // Without the recursion, and assuming a populated store, this is O(lg n) where n = dividend
 // With the recursion on the remainderSum (still assuming a populated store),
 // it's something like this:
-//   - the remainderSum will be < 1/2 of the original dividend
 //   - so we're looking at something like O(1/2(lg(n)) + 1/4(lg(n)) + ...)
 //   - so in total that approaches O(2*lg(n)), which is simply lg(n) again
 // The worst case for store population is O(n), since that is essentially
@@ -46,9 +45,8 @@ function intDivideDP(dividend, divisor) {
 	var count = 0;
 	var remainderSum = 0;
 	var place = 1;
-	console.log("dividend: " + dividend);
+
 	while (place <= dividend) {
-		console.log("place: " + place);
 		var hasPlace = dividend & place;
 		
 		if (hasPlace) {
@@ -71,7 +69,7 @@ function intDivideDP(dividend, divisor) {
 		
 		place <<= 1;
 	}
-	console.log("remainderSum: " + remainderSum);
+
 	return count + intDivideDP(remainderSum, divisor);
 }
 
